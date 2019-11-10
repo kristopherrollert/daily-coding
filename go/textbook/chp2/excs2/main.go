@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 
 	"../excs2/distconv"
 	"../excs2/massconv"
@@ -29,6 +30,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "conv: %v\n", err)
 			os.Exit(1)
 		}
+		text = strings.TrimSuffix(text, "\r\n")
 
 		t, err := strconv.ParseFloat(text, 64)
 		if err != nil {
