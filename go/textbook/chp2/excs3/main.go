@@ -32,8 +32,8 @@ func main() {
 		totalLoop += time.Since(start)
 	}
 
-	fmt.Printf("Avergae Normal runtime: %q\n", (totalNormal)/100)
-	fmt.Printf("Avergae Loop runtime: %q\n", (totalLoop)/100)
+	fmt.Printf("Normal runtime (for 1 million runs): %q\n", totalNormal)
+	fmt.Printf("Loop runtime (for 1 million runs): %q\n", totalLoop)
 
 }
 
