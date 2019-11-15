@@ -4,6 +4,7 @@
 
 import sys
 
+# Attempt 1: (got it right!)
 def URLify1(str_list, size):
     size -= 1
     revPoint = len(str_list) -1
