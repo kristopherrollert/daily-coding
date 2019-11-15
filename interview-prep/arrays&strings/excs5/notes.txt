@@ -1,0 +1,21 @@
+go through the array, matching characters. Once you get to one that isn't
+matching, then you got your problem.
+
+have different indexs for each one? that way we can offset?
+break up into different functions for readability
+
+removeable cases:
+if string is more than 1 size larger => NO
+if string is 1 size larger: must, remove
+if string is 1 size smaller: must add
+if string is the same size: must swtich (or do nothing)
+
+switch:
+loop through, if a charcter is different, that's fine. Set didEdit = True
+if you get to another incorrect character, return false. Otherwise return tru
+
+add:
+loop through, until characters are different, then skip this letter and set didEdit = false
+if you get to another incorrect character, return false. Otherwise return tru
+
+remove and add are the same, depending on which string is first
