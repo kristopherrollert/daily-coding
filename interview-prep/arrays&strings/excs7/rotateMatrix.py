@@ -24,12 +24,10 @@ def rotateMatrix1(M):
             M[(N - 1) - ii][(N - 1) - jj] = j # set botton to right
             M[(N - 1) - jj][ii] = k # set left to bottom
 
-    return M
-
 def generateRandomMatrix(N):
     return [[random.randint(0, 99) for i in range(N)] for j in range(N)]
 
-def printMatrix(N, ):
+def printMatrix(N):
     matrixLen = len(N)
     for i in range(matrixLen):
         for j in range(matrixLen):
@@ -45,7 +43,7 @@ if __name__ == '__main__':
         print("Randomly generated matrix of size %d by %d:" % (NLen, NLen))
         printMatrix(N)
         print()
-        N = rotateMatrix1(N)
+        rotateMatrix1(N)
         print("Matrix rotated clockwise:")
         printMatrix(N)
     else:

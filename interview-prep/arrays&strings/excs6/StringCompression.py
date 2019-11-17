@@ -28,11 +28,11 @@ def stringCompression1(str):
             count += 1
     new_str.append("%s%d" %(old_char, count))
     return str if new_len > old_len else "".join(new_str)
-    
+
 
 if __name__ == '__main__':
 
     if len(sys.argv) == 2:
         print("stringCompression: %s" % (stringCompression1(sys.argv[1])))
     else:
-        print("stringCompression must be given exactly two command line argument")
+        print("stringCompression must be given exactly one command line argument")
