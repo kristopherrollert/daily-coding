@@ -44,4 +44,5 @@ if __name__ == '__main__':
     if len(sys.argv) == 3:
         print("stringCompression: %s" % (stringRotation1(sys.argv[1], sys.argv[2])))
     else:
-        print("stringCompression must be given exactly two command line arguments")
+        print("stringCompression must be given exactly two command line arguments. The both\
+        strings")
