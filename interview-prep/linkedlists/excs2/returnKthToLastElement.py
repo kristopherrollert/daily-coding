@@ -32,4 +32,4 @@ if __name__ == '__main__':
         print("Kth to last element:\n", kthToLastElement(ll, int(sys.argv[2])))
     else:
         print("removeDuplicates must be given exactly two command line arguments. \
-            First the length of the randonly valued list, then the k value")
+            First the length of the randomly valued list, then the k value")
