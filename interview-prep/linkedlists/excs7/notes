@@ -1,0 +1,7 @@
+The stupid way: for each element in s1, compare it to every element in s2
+very slow
+
+An idea: hashing? I'm guessing hashing the object itself would work.
+
+I think hashing in the best move because there is no way to sort objects
+(which wouldn't even be a good idea)
