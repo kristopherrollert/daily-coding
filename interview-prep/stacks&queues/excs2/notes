@@ -1,0 +1,19 @@
+Stack Min: How would you design a stack in which, in addition to push and pop
+has a function min which returns the minimum element? Push, pop, and min
+should all operate in O(1) time.
+
+---
+
+The difficulty comes with finding a way
+
+We could keep track of min element, when new one comes we
+
+
+ITS A STACK
+keep a linked list of nodes representing mins?
+when you pushed, if you are bigger than the node idgaf about you
+if smaller, put ahead of me in linked list
+
+when popping, check if top on min, if top, then remove it from there too
+
+min just grabs the top element
