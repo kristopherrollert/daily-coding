@@ -96,6 +96,6 @@ if __name__ == '__main__':
         else:
             print("insersection:", ok)
     else:
-        print("removeDuplicates must be given exactly two command line arguments. \
+        print("intersecton must be given exactly two command line arguments. \
         first the length of the first list, second the length of the second, third \
         if they intersect [True, False]")
