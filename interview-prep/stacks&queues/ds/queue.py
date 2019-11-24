@@ -22,12 +22,12 @@ class Queue:
         n = self.first
         self.first = self.first.next
         if (self.first is None):
-            last = None
+            self.last = None
         return n.val
 
     def peek(self):
         if (self.first is None):
-            raise Exception("Stack is Empty")
+            raise Exception("Queue is Empty")
         return self.first.val
 
     def isEmpty(self):

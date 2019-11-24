@@ -1,3 +1,14 @@
+# Stack of Plates: Imagine a (literal) stack of plates. If the stack gets too
+# high, it might topple. Therefore, in real life, we would likely start a new
+# stack when the previous stack exceeds some threshold. Implement a data
+# structure SetOfStacks that mimics this. SetOfStacks should be composed of
+# several stacks and should create a new stack once the previous one exceeds
+# cappacity. SetOfStacks.push() and setOfStacks.pop() should be identically
+# to a single stack.
+
+# Followup: Implement a function popAt(int index) which performs a pop operation
+# on a specific sub-stack
+
 # A STACK OF STACKS???
 # this would require a lot of peeking. which kinda defeats the purpose of a
 # stack? well maybe not its still O(n) time, and when you run out you can
@@ -10,6 +21,9 @@
 
 from stack import *
 
+
+# Attempt 1: I got it sort of. They wanted popatindex to move everything over
+# which I didn't expect. They also used an array and not a map
 class StackOfStacks:
     def __init__(self, maxInStack):
         self.maxInStack = maxInStack
