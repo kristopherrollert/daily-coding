@@ -4,6 +4,7 @@ import math
 
 class Node:
     def __init__(self, val):
+        self.parent = None
         self.left = None
         self.right = None
         self.val = val
@@ -56,7 +57,8 @@ class MinHeap:
         self.traversePrint(node.right)
         print("|%d| " % node.val, end ='')
 
-    def print()
+    def getMin(self):
+        return root
 
 if __name__ == '__main__':
     s = MinHeap()
