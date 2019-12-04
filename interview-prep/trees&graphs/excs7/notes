@@ -1,0 +1,37 @@
+It feels like a graph is necessary. If there are any cycles than it cannot be
+built.
+
+Create a directed graph, then do depth first search.
+
+Cases where you won't be able to build:
+-> everything has a dependency
+-> there is a cycle
+
+keep track of everything with no dependencies?
+It would be cool if we could remove elements by the order of dependecies?
+You could loop thro
+
+you have a list of the project objects
+each project has two lists:
+    1. the things that depend on it
+    2. the things it depends on
+
+after creating all project objects,
+find all the ones with 0 dependencies
+build those arbitrarily
+find all the ones with 1 dependencies
+queue them all in, dequeue each one and see if they can be built. If it can't
+throw it back in the queue. but set loopObj = first requeue. If anything is built
+reset loopObj.
+
+
+only datapoint needed is dependency -> dependent
+and the number of dependencies each node requires
+
+breadth first search.
+queue all 0 dependencies to start.
+queue all elements, when dequeueing, if all dependencies aren't satisfied,
+throw it back in the queue
+
+how can we check quickly if all dependencies are satisfied.
+Maybe when an object is built, you remove the dependency and decrement a value
