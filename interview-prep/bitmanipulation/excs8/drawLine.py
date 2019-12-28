@@ -17,5 +17,23 @@
 # start and finish are done serpeartely from middle. can just wipe middle ones
 
 # 01234567 =>
-# start(3) => 00111111 : 2^(9 - x) - 1
-# end(3) => 11100000 (2^(x + 1) - 1) << (9 - x)
+# 01234567
+# 0 => 11111111 2^8
+# 1 =>
+# 7 => 00000001 2^1
+
+# start(3) => 00111111 : 2^(8 - x) - 1
+# end(3) => 11100000 (2^(x + 1) - 1) << (7 - x)
+
+import math
+
+def drawLine(screen, width, x1, x2, y):
+    if (x1 > x2):
+        x1, x2 = x2, x1
+    height = len(screen) / width
+    x1BitLocation = y * width + int(x1 / 8)
+    x2BitLocation = y * width + int(x2 / 8)
+    screen[x1BitLocation] = math.pow(2, 8 - (x1 % 8)) - 1
+    screen[x2BitLocation] = math.pow(2, 1 + (x2 % 8)) - 1 << (7 - (x2 % 8))
+    for i in range(x1BitLocation + 1, x2BitLocation - 1):
+        screen[x1BitLocation + i] = 255
