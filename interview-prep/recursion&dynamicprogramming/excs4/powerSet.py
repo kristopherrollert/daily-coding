@@ -1,7 +1,5 @@
 # Power Set: Write a method to return all subsets of a set
 
-
-
 def powerSet(set):
     ps = [[]]
     for i in range(len(set)):
@@ -32,3 +30,8 @@ def helper(lst, size):
     return l
 
 print(powerSet([1,2,3]))
+
+# we need to recursively create a new list. Start by traversing down to
+# making lists of one, then return those lists. Then the next level
+# creates all the lists possible by combining elements in the returned
+# data with the elements in the list
